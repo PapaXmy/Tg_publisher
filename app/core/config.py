@@ -2,6 +2,7 @@
 
 from pydantic_settings import BaseSetting
 
+
 class Settings(BaseSetting):
     PROJECT_NAME: str = "TG_publisher"
     DEBUG: bool = True
@@ -18,7 +19,7 @@ class Settings(BaseSetting):
 
     # security
     SECRET_KEY: str = "supersecret"
-    ALGORITHM: str= "HS256"
+    ALGORITHM: str = "HS256"
     ACCSESS_TOKEN_EXPIRE_MINUTES: int = 30
 
     class Config:
@@ -34,4 +35,5 @@ class Settings(BaseSetting):
             f"{self.POSTGRES_PORT}/{self.POSTGRES_DB}"
         )
 
-setting = Settings()
+
+settings = Settings()
